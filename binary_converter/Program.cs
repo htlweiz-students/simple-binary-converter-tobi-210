@@ -1,4 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Liste von Integern als Constructor
+﻿using System;
+using BinaryNamespace;
 
-Console.WriteLine("Hello, World!");
+class Program
+{
+    static void Main()
+    {
+        string input = " ";
+        Console.WriteLine("\n------------------------------------");
+        Console.WriteLine("BINÄRZAHLEN-KONVERTIERER");
+        Console.WriteLine("------------------------------------");
+        
+        BinaryConverter converter = new BinaryConverter();
+
+        Console.Write("Gib eine Binärzahl ein: ");
+        input = Console.ReadLine();
+
+        int dezimal = converter.Convert(input);
+        Console.WriteLine("Dezimalwert: " + dezimal + "\n");
+    }
+}
+

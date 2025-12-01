@@ -1,6 +1,18 @@
-namespace binary_converter;
+namespace BinaryNamespace
+{
+    public class BinaryConverter
+{
+    public int Convert(string binary)
+    {
+        int result = 0;
 
-public class Class1 {
+        foreach (char c in binary)
+        {
+            result = result * 2 + (int)(c - '0');
+        }
 
-    
+        return result;
+    }
+}
+
 }
